@@ -21,6 +21,10 @@ const UserSchema = new Schema<TUser, UserModel>(
       required: true,
       select: 0,
     },
+    role: {
+      type: String,
+      enum: ["superAdmin", "manager", "seller"],
+    },
   },
   {
     timestamps: true,

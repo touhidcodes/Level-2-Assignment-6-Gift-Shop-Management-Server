@@ -7,5 +7,6 @@ export type TLoginUser = {
 
 export type TJWTPayload = {
   _id: Types.ObjectId;
-  email: string;
+  username: string;
+  role: string;
 };

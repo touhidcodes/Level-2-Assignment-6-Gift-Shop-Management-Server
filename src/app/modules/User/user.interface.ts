@@ -6,6 +6,7 @@ export type TUser = {
   username: string;
   email: string;
   password: string;
+  role: "superAdmin" | "manager" | "seller";
   createdAt?: Date;
   updatedAt?: Date;
 };
