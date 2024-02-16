@@ -13,6 +13,6 @@ const CouponValidationSchema = z.object({
   }),
 });
 
-export const ProductValidation = {
+export const CouponValidation = {
   CouponValidationSchema,
 };
