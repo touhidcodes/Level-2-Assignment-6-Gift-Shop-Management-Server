@@ -11,6 +11,13 @@ export type TUser = {
   updatedAt?: Date;
 };
 
+export const userRoles = {
+  manager: "manager",
+  seller: "seller",
+};
+
+export type TUserRole = keyof typeof userRoles;
+
 export interface UserModel extends Model<TUser> {
   //instance methods for checking if the user exist
   isUserExistsByUsername(username: string): Promise<TUser>;
