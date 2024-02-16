@@ -4,6 +4,7 @@ import validateRequest from "../../middlewares/validateRequest";
 import { SalesValidation } from "./sales.validation";
 import { SalesControllers } from "./sales.controller";
 import auth from "../../middlewares/auth";
+import { userRoles } from "../User/user.interface";
 
 const router = express.Router();
 router.post(
@@ -12,6 +13,10 @@ router.post(
   validateRequest(SalesValidation.SalesValidationSchema),
   SalesControllers.createSales
 );
-router.get("/", auth("manager", "seller"), SalesControllers.getSales);
+router.get(
+  "/",
+  auth(userRoles.manager, userRoles.seller),
+  SalesControllers.getSales
+);
 
 export const SalesRoutes = router;

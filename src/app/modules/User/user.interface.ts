@@ -12,9 +12,10 @@ export type TUser = {
 };
 
 export const userRoles = {
+  superAdmin: "superAdmin",
   manager: "manager",
   seller: "seller",
-};
+} as const;
 
 export type TUserRole = keyof typeof userRoles;
 
