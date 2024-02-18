@@ -12,4 +12,6 @@ export type TSales = {
   grandTotal: number;
   seller: string;
   role: string;
+  productName: string;
+  productPrice: string;
 };

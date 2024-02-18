@@ -52,7 +52,6 @@ const createSales = async (payload: TSales) => {
 
   // Create a sale record in the database
   const result = await Sales.create(payload);
-
   return result;
 };
 
@@ -102,7 +101,19 @@ const getSales = async (payload: Record<string, any>) => {
   return result;
 };
 
+const getSingleSales = async (payload: string) => {
+  const result = await Sales.findById(payload);
+  return result;
+};
+
+const getUserSales = async (payload: string) => {
+  const result = await Sales.find({ username: payload });
+  return result;
+};
+
 export const SalesServices = {
   createSales,
   getSales,
+  getSingleSales,
+  getUserSales,
 };

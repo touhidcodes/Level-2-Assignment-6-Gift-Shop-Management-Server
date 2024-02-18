@@ -9,14 +9,27 @@ import { userRoles } from "../User/user.interface";
 const router = express.Router();
 router.post(
   "/",
-  auth("manager", "seller"),
+  auth(userRoles.manager, userRoles.seller),
   validateRequest(SalesValidation.SalesValidationSchema),
   SalesControllers.createSales
 );
+
 router.get(
   "/",
-  auth(userRoles.manager, userRoles.seller),
+  auth(userRoles.manager, userRoles.seller, userRoles.superAdmin),
   SalesControllers.getSales
+);
+
+router.get(
+  "/:salesId",
+  auth(userRoles.seller, userRoles.manager, userRoles.superAdmin),
+  SalesControllers.getSingleSales
+);
+
+router.get(
+  "/user/:username",
+  auth(userRoles.seller),
+  SalesControllers.getUserSales
 );
 
 export const SalesRoutes = router;

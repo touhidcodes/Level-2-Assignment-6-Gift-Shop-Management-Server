@@ -13,6 +13,7 @@ const createSales = catchAsync(async (req, res) => {
     data: result,
   });
 });
+
 const getSales = catchAsync(async (req, res) => {
   const result = await SalesServices.getSales(req.query);
 
@@ -24,7 +25,33 @@ const getSales = catchAsync(async (req, res) => {
   });
 });
 
+const getSingleSales = catchAsync(async (req, res) => {
+  const { salesId } = req.params;
+  const result = await SalesServices.getSingleSales(salesId);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Users Sales History retrieved successfully",
+    data: result,
+  });
+});
+
+const getUserSales = catchAsync(async (req, res) => {
+  const { username } = req.params;
+  const result = await SalesServices.getUserSales(username);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Users Sales History retrieved successfully",
+    data: result,
+  });
+});
+
 export const SalesControllers = {
   createSales,
   getSales,
+  getSingleSales,
+  getUserSales,
 };

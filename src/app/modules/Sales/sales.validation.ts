@@ -2,9 +2,17 @@ import { z } from "zod";
 
 const SalesValidationSchema = z.object({
   body: z.object({
+    productName: z.string({
+      invalid_type_error: "name must be a string",
+      required_error: "name is required",
+    }),
     quantity: z.string({
       invalid_type_error: "gift quantity must be a string",
       required_error: "gift quantity is required",
+    }),
+    productPrice: z.string({
+      invalid_type_error: "price must be a string",
+      required_error: "price is required",
     }),
     buyer: z.string({
       invalid_type_error: " name must be a string",

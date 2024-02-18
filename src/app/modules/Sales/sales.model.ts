@@ -4,10 +4,12 @@ import { TSales } from "./sales.interface";
 const salesSchema = new Schema<TSales>(
   {
     productId: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: Schema.Types.ObjectId,
+      ref: "Product",
       required: true,
-      ref: "product",
     },
+    productName: { type: String, required: true },
+    productPrice: { type: String, required: true },
     quantity: { type: String, required: true },
     buyer: { type: String, required: true },
     date: { type: String, required: true },
