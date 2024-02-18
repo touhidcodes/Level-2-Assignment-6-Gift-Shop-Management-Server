@@ -12,6 +12,10 @@ const salesSchema = new Schema<TSales>(
     buyer: { type: String, required: true },
     date: { type: String, required: true },
     sellDate: { type: Number, required: true },
+    coupon: { type: String },
+    discountPrice: { type: Number, required: true },
+    totalPrice: { type: Number, required: true },
+    grandTotal: { type: Number, required: true },
   },
   {
     timestamps: true,

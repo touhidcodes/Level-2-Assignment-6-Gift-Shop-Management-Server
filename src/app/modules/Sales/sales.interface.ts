@@ -6,4 +6,8 @@ export type TSales = {
   buyer: string;
   date: string;
   sellDate: number;
+  coupon?: string;
+  discountPrice: number;
+  totalPrice: number;
+  grandTotal: number;
 };

@@ -14,6 +14,8 @@ router.post(
   CouponControllers.createCoupon
 );
 
+router.get("/verify-coupon/:couponId", CouponControllers.verifyCoupon);
+
 router.get(
   "/",
   auth(userRoles.superAdmin, userRoles.manager, userRoles.seller),

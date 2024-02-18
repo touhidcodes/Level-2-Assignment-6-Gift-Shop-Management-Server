@@ -6,6 +6,13 @@ const createCoupon = async (payload: TCoupon) => {
   return result;
 };
 
+const verifyCoupon = async (payload: string) => {
+  const result = await Coupon.findOne({
+    code: payload,
+  });
+  return result;
+};
+
 const getCoupon = async () => {
   const result = await Coupon.find();
   return result;
@@ -24,6 +31,7 @@ const deleteCoupon = async (id: string) => {
 
 export const CouponServices = {
   createCoupon,
+  verifyCoupon,
   getCoupon,
   deleteCoupon,
 };

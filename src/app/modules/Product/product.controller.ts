@@ -24,6 +24,7 @@ const getProduct = catchAsync(async (req, res) => {
     data: result,
   });
 });
+
 const getSingleProduct = catchAsync(async (req, res) => {
   const productId = req.params.productId;
   const result = await ProductServices.getSingleProduct(productId);

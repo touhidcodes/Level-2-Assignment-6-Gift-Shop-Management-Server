@@ -13,6 +13,17 @@ const createCoupon = catchAsync(async (req, res) => {
   });
 });
 
+const verifyCoupon = catchAsync(async (req, res) => {
+  const { couponId } = req.params;
+  const result = await CouponServices.verifyCoupon(couponId);
+  sendResponse(res, {
+    statusCode: httpStatus.CREATED,
+    success: true,
+    message: "Coupon Applied successfully",
+    data: result,
+  });
+});
+
 const getCoupon = catchAsync(async (req, res) => {
   const result = await CouponServices.getCoupon();
 
@@ -38,6 +49,7 @@ const deleteCoupon = catchAsync(async (req, res) => {
 
 export const CouponControllers = {
   createCoupon,
+  verifyCoupon,
   getCoupon,
   deleteCoupon,
 };
