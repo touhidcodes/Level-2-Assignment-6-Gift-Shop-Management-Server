@@ -11,7 +11,10 @@ dotenv.config();
 const app: Application = express();
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "https://l2a5-gift-shop-dashboard.web.app"],
+  origin: [
+    "http://localhost:5173",
+    "https://gift-shop-management-client.web.app",
+  ],
   methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
   preflightContinue: false,
   optionsSuccessStatus: 204,

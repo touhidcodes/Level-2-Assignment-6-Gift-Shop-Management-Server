@@ -107,7 +107,7 @@ const getSingleSales = async (payload: string) => {
 };
 
 const getUserSales = async (payload: string) => {
-  const result = await Sales.find({ username: payload });
+  const result = await Sales.find({ seller: payload });
   return result;
 };
 

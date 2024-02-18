@@ -69,19 +69,37 @@ npm start
 
 Your application should now be running at http://localhost:5000.
 
-## User Credentials
+## User Login Credentials
 
 ```
-# User Login:
-· Username: user@assignment5
-· Password: 123456789
+# Super Admin Login:
+· Username: super@assignment6
+· Password: super@assignment6
+
+# Manager Login:
+· Username: manager@assignment6
+· Password: manager@assignment6
+
+# Seller Login:
+· Username: seller@assignment6
+· Password: seller@assignment6
 ```
 
-## API Documentation
+```
+# Coupon Code 1:
+· Coupon: TOUHIDCODES
+· Discount: 12%
 
-#### Live Project URL: https://l2a5-gift-shop-dashboard.web.app/
+# Coupon Code 2:
+· Coupon: 21Language
+· Discount: 10%
+```
 
-#### Live API URL: https://level2assignment5.vercel.app/
+## Live URLs
+
+#### Live Project URL: https://gift-shop-management-client.web.app/
+
+#### Live API URL: https://gift-shop-management-server-omega.vercel.app/api
 
 #### API Endpoints:
 
@@ -110,7 +128,7 @@ Your application should now be running at http://localhost:5000.
 
 ```
  "dependencies": {
-  "@types/bcrypt": "^5.0.2",
+    "@types/bcrypt": "^5.0.2",
     "@types/jsonwebtoken": "^9.0.5",
     "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
