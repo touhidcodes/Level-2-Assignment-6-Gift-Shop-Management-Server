@@ -10,4 +10,6 @@ export type TSales = {
   discountPrice: number;
   totalPrice: number;
   grandTotal: number;
+  seller: string;
+  role: string;
 };

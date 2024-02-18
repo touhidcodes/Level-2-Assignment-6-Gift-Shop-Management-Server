@@ -16,6 +16,8 @@ const salesSchema = new Schema<TSales>(
     discountPrice: { type: Number, required: true },
     totalPrice: { type: Number, required: true },
     grandTotal: { type: Number, required: true },
+    seller: { type: String, required: true },
+    role: { type: String, required: true },
   },
   {
     timestamps: true,

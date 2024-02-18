@@ -30,6 +30,14 @@ const SalesValidationSchema = z.object({
       invalid_type_error: " total price must be a number",
       required_error: " total price is required",
     }),
+    seller: z.string({
+      invalid_type_error: "seller must be a string",
+      required_error: "seller is required",
+    }),
+    role: z.string({
+      invalid_type_error: "role must be a string",
+      required_error: "role is required",
+    }),
   }),
 });
 
