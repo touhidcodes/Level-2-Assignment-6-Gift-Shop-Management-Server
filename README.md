@@ -1,4 +1,4 @@
-# Level-2 Assignment-5 Gift Shop Management Server
+# Level-2 Assignment-6 Gift Shop Management Server
 
 This is a Node.js and Express.js application with TypeScript as the programming language, integrating MongoDB with Mongoose for user data and order management. Ensure data integrity through validation using Zod.
 
