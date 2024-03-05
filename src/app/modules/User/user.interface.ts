@@ -6,7 +6,7 @@ export type TUser = {
   username: string;
   email: string;
   password: string;
-  role: "superAdmin" | "manager" | "seller";
+  role: "superAdmin" | "manager" | "seller" | "user";
   createdAt?: Date;
   updatedAt?: Date;
 };
@@ -15,6 +15,7 @@ export const userRoles = {
   superAdmin: "superAdmin",
   manager: "manager",
   seller: "seller",
+  user: "user",
 } as const;
 
 export type TUserRole = keyof typeof userRoles;

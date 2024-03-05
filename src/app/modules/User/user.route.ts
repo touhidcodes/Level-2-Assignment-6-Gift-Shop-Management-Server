@@ -9,6 +9,12 @@ const router = express.Router();
 //  user routes
 router.post(
   "/register",
+  validateRequest(UserValidation.CreateUserValidationSchema),
+  UserControllers.createUser
+);
+
+router.post(
+  "/register/admin",
   auth(userRoles.manager, userRoles.superAdmin),
   validateRequest(UserValidation.CreateUserValidationSchema),
   UserControllers.createUser
